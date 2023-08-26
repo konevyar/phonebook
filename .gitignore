@@ -160,5 +160,4 @@ cython_debug/
 #.idea/
 
 # Data files
-phonebook.json
-test_phonebook.json
+*.json
