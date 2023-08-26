@@ -55,7 +55,9 @@ def main():
                 print(f"\nРезультат поиска:\n{result}")
 
         elif choice == '4':
-            page = int(input("Введите номер страницы: "))
+            page = int(input(
+                "Введите номер страницы (на странице 15 записей): "
+            ))
             page_size = int(15)
             records = phonebook.display(page, page_size)
             for record in records:
