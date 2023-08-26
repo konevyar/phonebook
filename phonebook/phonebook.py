@@ -59,4 +59,8 @@ class PhoneBook:
         :param page_size: Количество записей на странице.
         :return: Список записей на указанной странице.
         """
-        return self.data[(page - 1) * page_size: page * page_size]
+        start_index = (page - 1) * page_size
+        end_index = page * page_size
+        subset = self.data[start_index:end_index]
+
+        return [{index + 1: record} for index, record in enumerate(subset)]
